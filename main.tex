@@ -1,0 +1,75 @@
+\documentclass[12pt]{report}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usepackage{titlesec}
+\usepackage{libertine}
+\usepackage{microtype}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\setlength{\headheight}{15pt}
+\renewcommand{\headrulewidth}{2pt}
+\renewcommand{\footrulewidth}{1pt}
+\rhead{Truck-Routing - \thechapter \hspace{0.1em} \nouppercase{\leftmark}}
+\lhead{5BHIF 2020/21}
+\rfoot{Seite \thepage}
+\fancypagestyle{plain}{
+}
+
+\graphicspath{ {images/} }
+
+\titleformat{\chapter}{\huge\normalfont\bfseries}{\thechapter}{1em}{\Huge}
+
+\renewcommand{\contentsname}{Inhaltsverzeichnis}
+\renewcommand{\chaptername}{Abschnitt}
+\renewcommand{\chaptermark}[1]{\markboth{#1}{}}
+
+\title {
+    {Truck-Routing}\\
+    {\large Arduvi GmbH}\\
+    {\includegraphics{ArduviLogoWithText.png}}
+}
+\author{Florian Eder}
+\date{28.12.2020}
+
+\begin{document}
+    \maketitle
+
+    \chapter*{Eidesstattliche Erklärung}
+    \input{chapters/00_Eidesstattliche_Erklaerung.tex}
+
+    \chapter*{Danksagung}
+    \input{chapters/00_Danksagung.tex}
+
+    \chapter*{Abstract}
+    \input{chapters/00_Abstract.tex}
+
+    \chapter*{Kurzfassung}
+    \input{chapters/00_Kurzfassung.tex}
+
+    \tableofcontents
+
+    \chapter*{Abbildungsverzeichnis}
+    \input{chapters/00_Abbildungsverzeichnis.tex}
+
+    \chapter*{Quellcodeverzeichnis}
+    \input{chapters/00_Quellcodeverzeichnis.tex}
+
+
+    \chapter{Einleitung und Überblick}
+    \input{chapters/01_Einleitung.tex}
+
+
+
+
+
+
+
+    \chapter{Resümee}
+    \input{chapters/10_Resuemee.tex}
+
+    \chapter{Anahng}
+    \input{chapters/11_Anhang.tex}
+    
+\end{document}
