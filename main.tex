@@ -5,6 +5,7 @@
 \usepackage{titlesec}
 \usepackage{libertine}
 \usepackage{microtype}
+\usepackage[backend=biber, style=authoryear, natbib=true]{biblatex}
 \usepackage{fancyhdr}
 \pagestyle{fancy}
 \fancyhf{}
@@ -16,6 +17,8 @@
 \rfoot{Seite \thepage}
 \fancypagestyle{plain}{
 }
+
+\addbibresource{literatur.bib}
 
 \setcounter{secnumdepth}{5}
 
@@ -63,57 +66,58 @@
 \end{titlepage}
 
     \chapter*{Eidesstattliche Erklärung}
-    \input{chapters/00_Eidesstattliche_Erklaerung.tex}
+        \input{chapters/00_Eidesstattliche_Erklaerung.tex}
 
     \chapter*{Danksagung}
-    \input{chapters/00_Danksagung.tex}
+        \input{chapters/00_Danksagung.tex}
 
     \chapter*{Abstract}
-    \input{chapters/00_Abstract.tex}
+        \input{chapters/00_Abstract.tex}
 
     \chapter*{Kurzfassung}
-    \input{chapters/00_Kurzfassung.tex}
+        \input{chapters/00_Kurzfassung.tex}
 
     \tableofcontents
 
     \chapter*{Abbildungsverzeichnis}
-    \input{chapters/00_Abbildungsverzeichnis.tex}
+        \input{chapters/00_Abbildungsverzeichnis.tex}
 
     \chapter*{Quellcodeverzeichnis}
-    \input{chapters/00_Quellcodeverzeichnis.tex}
+        \input{chapters/00_Quellcodeverzeichnis.tex}
 
 
     \chapter{Einleitung und Überblick}
-    \input{chapters/01_Einleitung.tex}
+        \input{chapters/01_Einleitung.tex}
 
     \chapter{Arduvi}
-    \input{chapters/02_Arduvi.tex}
+        \input{chapters/02_Arduvi.tex}
 
     \chapter{Digitalisierung im Handel}
-    \input{chapters/03_DigitalisierungHandel.tex}
+        \input{chapters/03_DigitalisierungHandel.tex}
 
     \chapter{LKW-Fahrverbote und sonstige Einschränkungen}
-    \input{chapters/04_LKWBedingungen.tex}
+        \input{chapters/04_LKWBedingungen.tex}
 
     \chapter{Logistik}
-    \input{chapters/05_Logistik.tex}
+        \input{chapters/05_Logistik.tex}
 
     \chapter{Verwendete Technologien}
-    \input{chapters/07_Technologien.tex}
+        \input{chapters/07_Technologien.tex}
 
     \chapter{Projektaufbau}
-    \input{chapters/08_Projektaufbau.tex}
+        \input{chapters/08_Projektaufbau.tex}
 
     \chapter{Zukunft des Projektes}
-    \input{chapters/09_Zukunft.tex}
+        \input{chapters/09_Zukunft.tex}
 
     \chapter{Projektmanagement}
-    \input{chapters/10_Projektmanagement.tex}
+        \input{chapters/10_Projektmanagement.tex}
 
     \chapter{Resümee}
-    \input{chapters/11_Resuemee.tex}
+        \input{chapters/11_Resuemee.tex}
 
     \chapter{Anhang}
-    \input{chapters/12_Anhang.tex}
+        \printbibliography
+        \input{chapters/12_Anhang.tex}
     
 \end{document}
