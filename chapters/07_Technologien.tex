@@ -2,7 +2,7 @@ In diesem Kapitel stelle ich die verwendeten Technolgien und ihre Stärken,
 wie auch ihere Schwächen vor.
 \\
 Die Anzahl an verschiedenen Möglichkeiten ein Projekt umzusetzten ist in keiner 
-Branche so hoch wie in der Informatik. Es ist wichtig, von Beginn an Informationen 
+Branche so hoch, wie in der Informatik. Es ist wichtig, von Beginn an Informationen 
 über potenzielle Lösungen zu suchen und diese zu evaluieren.
 
 \section{Backend}
@@ -12,8 +12,9 @@ enorm Wichtig für einen reibungslosen Ablauf. Falschen Entscheidungen können e
 Die Struktur des Backends war bereits vorhanden und auf dieser wurde aufgebaut.
 
     \subsection{ASP .NET Core}
-    ASP .Net Core ist der Nachfolger von ASP .NET.  Dieses kostenlose Open-Source-Webframework
-    bietet die Möglichkeit platformunabhängige Applikationen zu entwickeln.
+    ASP .Net Core ist der Nachfolger von ASP .NET.  Dieses kostenlose\\
+    Open-Source-Webframework bietet die Möglichkeit platformunabhängige\\
+    Applikationen zu entwickeln.
     \\
     Es bietet eine modulare Software-Entwicklung, da eine Vielzahl von fertigen Paketen
     verschiedenster Art zur Verfügung stehen.
@@ -21,25 +22,55 @@ Die Struktur des Backends war bereits vorhanden und auf dieser wurde aufgebaut.
     Da es Server-Seitig bereits von Arduvi verwendet wurde, ist mir die Entscheidung, welches
     Webframework für meine Diplomarbeit in Frage kommmen würde, abgenommen worden.
 
-
     \subsection{Datenspeicherung}
     Die Datenverwaltung, wie auch die Datenspeicherung ist ein zentraler Bestandteil
-    einer Applikation.
+    einer Applikation. Sie dient dazu, Inhalte permanent abzuspeichern, um diese jederzeit 
+    wieder abrufen zu können. Es gibt verschiedene Methoden, wie Daten abgespeichert werden können.
+    In meinem Fall habe ich den Clound-Dienst Azure verwendet.
 
-        \subsubsection{Azure CosmosDB}
-        a
+        \subsubsection{Azure Cosmos DB}
+        Azure Cosmos DB ist ein global verteiltes, schema-freies und horizontal skalierbares 
+        Datenbankservice aus dem Hause Microsoft. Das Datenbankservice ist Teil der Cloud-Computing-Plattform namens Azure.
+        Mithilfe verschiedener APIs können Daten bestmöglich verwaltet werden.
+        \\
+        Da der Cloud-Dienst Azure komplett in die Applikation intigriert ist, war es selbstverständnis,
+        diesen auch zu nutzen.
 
-        \subsubsection{Azure GraphDB}
-        a
+        \subsubsection{Azure Cosmos DB SQL API}
+        Mithilfe der SQL API können Daten dokumentenbasiert im Format JSON in die Azure Cosmos DB 
+        eingetragen werden. Dies erfolgt in sogenannten Dokumenten. Weiteres können diese Dokumente
+        in Partitionen unterteilt werden. Die einzelnen Einträge innerhalb eines Dokumentes werden 
+        Items genannt. Dokumente werden in einem Container abgespeichert und Container wiederum in Datenbanken.
+        \\
+        Die Schnittstelle zwischen Applikation und Datenbank war bereits vorhanden und es mussten jediglich
+        die Methoden für die Verwaltung der Routendaten implementiert werden.
+
+        \subsubsection{Azure Cosmos DB Gremlin API}
+        Die Gremlin API, welche auf die Azure Cosmos DB zugreift, wird verwendet um Graphen zu persistieren.
+        Meist wird es benutzt, wenn die Beziehung zwischen Entitäten eine große Rolle spielt. Die sogenannten
+        Property-Graphen bestehen aus folgenden Elementen:
+        \begin{itemize}
+            \item Knoten (Vertex)
+            \item Kanten (Edge)
+            \item Labels
+            \item Eigenschaften (Properties)
+        \end{itemize}
+        Grundsätzlich besteht der Graph aus Vertices und Edges. Mithilfe des Labels wird ihnen ein Name zugeteilt.
+        Dieser bestimmt den Typ eines Vertex bzw. einer Edge. Properties bestehen aus Key-Value-Pairs, welche
+        einem Vertex oder einer Edge angehören. 
+        \\
+        Da die Schnittstelle zwischen Applikation und Datenbank noch nicht vorhanden war, musste dise
+        komplett neu implementiert werden.
 
     \subsection{Weitere Frameworkds}
     a
 
 \section{Client}
-a
+Die Darstellung der Daten ist Client-Seitig. //todo: mehr schreiben
 
     \subsection{HTML}
-    a
+    Die Hypertext Markup Language, kurz HTML, ist eine Auszeichnungssprache zum Strukturieren von
+    
 
     \subsection{CSS}
     a
