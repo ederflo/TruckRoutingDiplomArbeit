@@ -1,39 +1,36 @@
-In diesem Kapitel stelle ich die verwendeten Technolgien und ihre Stärken, 
-wie auch ihere Schwächen vor.
+In diesem Kapitel stelle ich die verwendeten Technologien für mein Projekt vor.
 \\
-Die Anzahl an verschiedenen Möglichkeiten ein Projekt umzusetzten ist in keiner 
+Die Anzahl an verschiedenen Möglichkeiten ein Projekt umzusetzen, ist in keiner 
 Branche so hoch, wie in der Informatik. Es ist wichtig, von Beginn an Informationen 
 über potenzielle Lösungen zu suchen und diese zu evaluieren.
 
 \section{Backend}
-Server-Seitig ist die Logik implementiert. Die richtige Auswahl des Backends und deren Aufbau ist
-enorm Wichtig für einen reibungslosen Ablauf. Falschen Entscheidungen können enorme Folgen auslösen.
+Serverseitig ist die Logik implementiert. Die richtige Auswahl des Backends und deren Aufbau ist
+enorm wichtig für einen reibungslosen Ablauf. Falschen Entscheidungen können enorme Folgen auslösen.
 \\
 Die Struktur des Backends war bereits vorhanden und auf dieser wurde aufgebaut.
 
-    \subsection{ASP .NET Core}
-    ASP .Net Core ist der Nachfolger von ASP .NET.  Dieses kostenlose\\
-    Open-Source-Webframework bietet die Möglichkeit platformunabhängige\\
-    Applikationen zu entwickeln.
-    \\
-    Es bietet eine modulare Software-Entwicklung, da eine Vielzahl von fertigen Paketen
-    verschiedenster Art zur Verfügung stehen.
+    \subsection{ASP.NET Core}
+    Active Server Pages .NET Core, kurz ASP.NET Core, ist der Nachfolger von ASP.NET. Dieses kostenlose
+    Open-Source-Webframework bietet die Möglichkeit plattformunabhängige Applikationen zu entwickeln. 
+    Es bietet eine modulare Software-Entwicklung, da eine Vielzahl von fertigen Paketen verschiedenster 
+    Art zur Verfügung stehen.
     \\\\
-    Da es Server-Seitig bereits von Arduvi verwendet wurde, ist mir die Entscheidung, welches
-    Webframework für meine Diplomarbeit in Frage kommmen würde, abgenommen worden.
+    Da dieses Framework von Arduvi bereits verwendet wurde, ist mir die Entscheidung, welches
+    Webframework für meine Diplomarbeit in Frage kommen würde, abgenommen worden.
 
     \subsection{Datenspeicherung}
     Die Datenverwaltung, wie auch die Datenspeicherung ist ein zentraler Bestandteil
     einer Applikation. Sie dient dazu, Inhalte permanent abzuspeichern, um diese jederzeit 
     wieder abrufen zu können. Es gibt verschiedene Methoden, wie Daten abgespeichert werden können.
-    In meinem Fall habe ich den Clound-Dienst Azure verwendet.
+    In meinem Fall habe ich den Cloud-Dienst Azure verwendet.
 
         \subsubsection{Azure Cosmos DB}
         Azure Cosmos DB ist ein global verteiltes, schema-freies und horizontal skalierbares 
         Datenbankservice aus dem Hause Microsoft. Das Datenbankservice ist Teil der Cloud-Computing-Plattform namens Azure.
         Mithilfe verschiedener APIs können Daten bestmöglich verwaltet werden.
         \\
-        Da der Cloud-Dienst Azure komplett in die Applikation intigriert ist, war es selbstverständnis,
+        Da der Cloud-Dienst Azure komplett in die Applikation integriert ist, war es selbstverständlich,
         diesen auch zu nutzen.
 
         \subsubsection{Azure Cosmos DB SQL API}
@@ -42,7 +39,7 @@ Die Struktur des Backends war bereits vorhanden und auf dieser wurde aufgebaut.
         in Partitionen unterteilt werden. Die einzelnen Einträge innerhalb eines Dokumentes werden 
         Items genannt. Dokumente werden in einem Container abgespeichert und Container wiederum in Datenbanken.
         \\
-        Die Schnittstelle zwischen Applikation und Datenbank war bereits vorhanden und es mussten jediglich
+        Die Schnittstelle zwischen Applikation und Datenbank war bereits vorhanden und es mussten lediglich
         die Methoden für die Verwaltung der Routendaten implementiert werden.
 
         \subsubsection{Azure Cosmos DB Gremlin API}
@@ -59,27 +56,56 @@ Die Struktur des Backends war bereits vorhanden und auf dieser wurde aufgebaut.
         Dieser bestimmt den Typ eines Vertex bzw. einer Edge. Properties bestehen aus Key-Value-Pairs, welche
         einem Vertex oder einer Edge angehören. 
         \\
-        Da die Schnittstelle zwischen Applikation und Datenbank noch nicht vorhanden war, musste dise
+        Da die Schnittstelle zwischen Applikation und Datenbank noch nicht vorhanden war, musste diese
         komplett neu implementiert werden.
 
-    \subsection{Weitere Frameworkds}
-    a
-
 \section{Client}
-Die Darstellung der Daten ist Client-Seitig. //todo: mehr schreiben
+Die Darstellung und Strukturierung der Daten wird clientseitig vollzogen. Dazu wurde der sogenannte 
+"living standard" verwendet. Dieser beschreibt die Kombination aus HTML, JavaScript und CSS und wird
+vom World Wide Web Consortium (W3C) ständig weiterentwickelt.
 
     \subsection{HTML}
-    Die Hypertext Markup Language, kurz HTML, ist eine Auszeichnungssprache zum Strukturieren von
-    
+    Die Hypertext Markup Language, kurz HTML, ist eine Auszeichnungssprache zum Darstellen und 
+    Strukturieren von Elementen wie zum Beispiel Paragrafen, Listen, Tabellen oder auch Buttons.
+    \\
+    Sie ist die Sprache des World Wide Webs und wird von allen gängigen Browsern unterstützt.
+    Allerdings dient HTML rein zur Strukturierung, denn die visuelle Darstellung wird mit CSS umgesetzt.
 
     \subsection{CSS}
-    a
+    Cascading Style Sheets, kurz CSS, wird zur visuellen Gestaltung von HTML- oder XML-Code verwendet. 
+    Damit sollte das Aussehen von der Strukturierung der Inhalte getrennt werden. Mittels CSS können
+    zum Beispiel Farben angepasst, Animationen eingefügt oder auch Abstände zwischen Elementen
+    eingestellt werden.
 
-    \subsection{Javascript}
-    a
+    \subsection{JavaScript}
+    Die Skriptsprache JavaScript, kurz JS, welche dynamisch typisiert, objektorientiert und 
+    klassenlos ist. Ursprünglich wurde sie im Jahr 1995 von Netscape entwickelt, um dynamische
+    Websiten zu bauen. Mittlerweile allerdings kommt sie auch serverseitig oder für Microcontroller
+    zum Einsatz. Objektorientiertes, prozedurales oder auch funktionales programmieren ist mit JavaScript
+    möglich.
 
     \subsection{Razor Pages}
-    a
+    Razor ist eine Markup-Syntax, welche die Möglichkeit bietet, serverseitigen Code in Websiten
+    zu integrieren. Es ist somit keine Programmiersprache, sondern eine serverseitige Auszeichnungssprache.
+    Üblicherweise wird .cshtml als Dateiendung verwendet. Bevor die Website an den Browser gesendet wird,
+    wird der serverseitige Code (meist C\#) ausgeführt.
 
-    \subsection{Weitere Frameworks}
-    a   
+    \subsection{Template - Inspinia Admin Theme}
+    Das Inspinia Admin Theme ist ein responsives Admin-Dashboard-Theme, das auf dem Bootstrap 4.x
+    Framework aufbaut. Eine Vielzahl an Webframeworks und HTML-Templates wird somit bereits mitgeliefert.
+
+    \subsection{Weitere Frameworks oder Libraries}
+    Natürlich reichen diese fünf oben genannten Technologien aus, um eine voll fortschrittliche, voll
+    funktionsfähige Website zu bauen. Es gibt allerdings eine vielzahl an JavaScript Libraries, welche
+    einem viel Arbeit abnehmen und somit Zeit eingespart wird. Nun möchte ich einige der wichtigsten
+    Bibliotheken für mein Projekt aufzählen.
+
+    \subsubsection{Bootstrap}
+    Bootstrap ist eines der beliebtesten open-source Frameworks für die Entwicklung von modernen 
+    Webseiten mittels HTML, CSS und JS. Eines der wichtigsten Features sind Media-Queries, die für
+    die responsive Darstellung eingesetzt werden können.
+
+    \subsubsection{jQuery}
+    jQuery ist eine umfangreiche JavaScript Library für einfacheres und schnelleres Zugreifen auf den
+    HTML Dombaum. Viele JavaScript Frameworks bauen auf jQuery und somit ist es in einer Vielzahl
+    von Projekten vertreten.
