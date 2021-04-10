@@ -1,12 +1,16 @@
 \documentclass[12pt]{report}
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
+\usepackage{csquotes}
+\usepackage[ngerman]{babel}
+\usepackage[table,xcdraw]{xcolor}
 \usepackage{graphicx}
 \usepackage{titlesec}
 \usepackage{libertine}
 \usepackage{microtype}
 \usepackage[none]{hyphenat}
-\usepackage[backend=biber, style=authoryear, natbib=true]{biblatex}
+\usepackage[backend=biber, style=alphabetic]{biblatex}
+\addbibresource{literatur.bib}
 \usepackage{fancyhdr}
 \pagestyle{fancy}
 \fancyhf{}
@@ -18,8 +22,6 @@
 \rfoot{Seite \thepage}
 \fancypagestyle{plain}{
 }
-
-\addbibresource{literatur.bib}
 
 \setcounter{secnumdepth}{5}
 
